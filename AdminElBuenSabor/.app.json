@@ -4,13 +4,980 @@
     {
       "type": "NativeScript:view",
       "name": "homeView",
-      "components": [],
-      "title": "Home View",
+      "components": [
+        {
+          "type": "NativeScript:authentication",
+          "name": "homeViewModel",
+          "dataProvider": "elBuenSabor",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Registrar",
+          "registerEmailLabel": "Correo",
+          "registerPasswordLabel": "Contraseña",
+          "registerNameLabel": "Usuario",
+          "registerLabel": "Crear",
+          "registerRedirect": "platos",
+          "gotoSigninLabel": "Regresar",
+          "enableLogout": true,
+          "logoutLabel": "Salir",
+          "enableRememberme": true,
+          "remembermeLabel": "Recordar",
+          "emailLabel": "Correo",
+          "passwordLabel": "Contraseña",
+          "signinLabel": "Iniciar",
+          "signinRedirect": "platos"
+        }
+      ],
+      "title": "Login",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "sucursales",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "latitud",
+                  "title": "Latitud",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "latitud"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "longitud",
+                  "title": "Longitud",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "longitud"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "activo",
+                  "title": "Activo",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "activo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "serie",
+                  "title": "Serie",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "serie"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "celular",
+                  "title": "Celular",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "celular"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "telefono",
+                  "title": "Teléfono",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "telefono"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "horario",
+                  "title": "Horario",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "horario"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "radio",
+                  "title": "Radio",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "radio"
+                }
+              ],
+              "name": "editableListForm1",
+              "formType": "detail"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombre",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "direccion",
+                  "title": "Dirección",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "direccion"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "latitud",
+                  "title": "Latitud",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "latitud"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "longitud",
+                  "title": "Longitud",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "longitud"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "activo",
+                  "title": "Activo",
+                  "inputType": "switch",
+                  "dataBinding": "activo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "serie",
+                  "title": "Serie",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "serie"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "celular",
+                  "title": "Celular",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "celular"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "telefono",
+                  "title": "Teléfono",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "telefono"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "horario",
+                  "title": "Horario",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "horario"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "radio",
+                  "title": "Radio",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "radio"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "imagen",
+                  "title": "Imagen",
+                  "inputType": "image",
+                  "titlePosition": "left",
+                  "alignment": "center"
+                }
+              ],
+              "name": "editableListForm2",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombre",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "direccion",
+                  "title": "Dirección",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "direccion"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "activo",
+                  "title": "Activo",
+                  "inputType": "switch",
+                  "dataBinding": "activo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "horario",
+                  "title": "Horario",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "horario"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "celular",
+                  "title": "Celular",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "celular"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "telefono",
+                  "title": "Teléfono",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "telefono"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "serie",
+                  "title": "Serie",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "serie"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "radio",
+                  "title": "Radio",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "radio"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "imagen",
+                  "title": "Imagen",
+                  "inputType": "image",
+                  "titlePosition": "top",
+                  "alignment": "center",
+                  "dataBindingImage": "imagen"
+                }
+              ],
+              "name": "editableListForm3",
+              "formType": "edit"
+            }
+          ],
+          "name": "sucursalesModel",
+          "dataProvider": "elBuenSabor",
+          "collection": "sucursales",
+          "headerField": "nombre",
+          "imageField": "imagen",
+          "subHeaderField": "activo",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Crear Sucursal",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Editar Sucursal",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "nombre",
+          "detailSubHeaderField": "nombre",
+          "detailDescriptionField": "direccion",
+          "detailImageField": "imagen"
+        }
+      ],
+      "title": "Sucursales",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "empleados",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombreAdd",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "apellidoAdd",
+                  "title": "Apellido",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "apellido"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "sucursal",
+                  "title": "Sucursal",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "sucursal"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "activoAdd",
+                  "title": "Activo",
+                  "inputType": "switch",
+                  "dataBinding": "activo"
+                }
+              ],
+              "name": "editableListForm7",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombreEdit",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "apellidoEdit",
+                  "title": "Apellido",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "apellido"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "celularEdit",
+                  "title": "Celular",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "celular"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "sucursalEdit",
+                  "title": "Sucursal",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "sucursal"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "ativoEdit",
+                  "title": "Activo",
+                  "inputType": "switch",
+                  "dataBinding": "activo"
+                }
+              ],
+              "name": "editableListForm13",
+              "formType": "edit"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "celularDetails",
+                  "title": "Calular",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "celular"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "sucursalDetails",
+                  "title": "Sucursal",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "sucursal"
+                }
+              ],
+              "name": "editableListForm48",
+              "formType": "detail"
+            }
+          ],
+          "name": "empleadosModel",
+          "dataProvider": "elBuenSabor",
+          "collection": "empleados",
+          "headerField": "nombre",
+          "subHeaderField": "apellido",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Crear Empleado",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Editar Empleado",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "activo",
+          "detailSubHeaderField": "nombre",
+          "detailDescriptionField": "apellido"
+        }
+      ],
+      "title": "Empleados",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "tipos",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "tipoAdd",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                }
+              ],
+              "name": "editableListForm17",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombreEditar",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                }
+              ],
+              "name": "editableListForm18",
+              "formType": "edit"
+            }
+          ],
+          "name": "tiposModel",
+          "dataProvider": "elBuenSabor",
+          "collection": "tipos",
+          "headerField": "nombre",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Crear Tipo",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Editar Tipo",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detaille",
+          "detailSubHeaderField": "nombre"
+        }
+      ],
+      "title": "Tipos",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "categorias",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombreCategoria",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                }
+              ],
+              "name": "editableListForm23",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombreCategoria",
+                  "title": "Text field",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                }
+              ],
+              "name": "editableListForm24",
+              "formType": "edit"
+            }
+          ],
+          "name": "categoriasModel",
+          "dataProvider": "elBuenSabor",
+          "collection": "categorias",
+          "headerField": "nombre",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Crear Categoria",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Editar Categoria",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detaille",
+          "detailSubHeaderField": "nombre"
+        }
+      ],
+      "title": "Categorias",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "platos",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "precioPlato",
+                  "title": "Precio",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "precio"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "activoPlato",
+                  "title": "Activo",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "activo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "tipo",
+                  "title": "Tipo",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "tipo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "categoria",
+                  "title": "Categoria",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "categoria"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "dias",
+                  "title": "Dias",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "dias"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "etiqueta",
+                  "title": "etiqueta",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "etiqueta"
+                }
+              ],
+              "name": "editableListForm28",
+              "formType": "detail"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombrePlatoAdd",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "ingredientesAdd",
+                  "title": "Ingredientes",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "ingredientes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "precioAdd",
+                  "title": "PrecioAdd",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "precio"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "etiquetaAdd",
+                  "title": "Etiqueta",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "etiqueta"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "categoriaAdd",
+                  "title": "Categoria",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "categoria"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "tipo",
+                  "title": "Tipo",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "tipo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "diasAdd",
+                  "title": "Dias",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "dias"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "personalizacionAdd",
+                  "title": "Personalizar",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "personalizacion"
+                }
+              ],
+              "name": "editableListForm33",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "nombrePlatoEdit",
+                  "title": "Nombre",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "nombre"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "ingredientesEdit",
+                  "title": "Ingredientes",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "ingredientes"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "categoriaEdit",
+                  "title": "Categoria",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "categoria"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "tipoEdit",
+                  "title": "Tipo",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "tipo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "precioEdit",
+                  "title": "Edit",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "precio"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "activoEdit",
+                  "title": "activo",
+                  "inputType": "switch",
+                  "dataBinding": "activo"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "diasEdit",
+                  "title": "Dias",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "dias"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "personalizacionEdit",
+                  "title": "Personalizar",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "personalizacion"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "imagenEdit",
+                  "title": "imagenEdit",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "imagen"
+                }
+              ],
+              "name": "editableListForm40",
+              "formType": "edit"
+            }
+          ],
+          "name": "platosModel",
+          "dataProvider": "elBuenSabor",
+          "collection": "platos",
+          "headerField": "nombre",
+          "imageField": "imagen",
+          "subHeaderField": "precio",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Crear Plato",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Editar Plato",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detaille plato",
+          "detailSubHeaderField": "nombre",
+          "detailDescriptionField": "ingredientes",
+          "detailImageField": "foto"
+        }
+      ],
+      "title": "Platos",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "sugerencias",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "respuesta",
+                  "title": "Respuesta",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "respuesta"
+                }
+              ],
+              "name": "editableListForm53",
+              "formType": "edit"
+            }
+          ],
+          "name": "sugerenciasModel",
+          "dataProvider": "elBuenSabor",
+          "collection": "sugerencias",
+          "headerField": "puntuacion",
+          "subHeaderField": "detalle",
+          "isMapView": false,
+          "addItemForm": false,
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "detalle",
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "puntuacion",
+          "detailSubHeaderField": "detalle",
+          "detailDescriptionField": "respuesta"
+        }
+      ],
+      "title": "Sugerencias",
+      "addToNavigation": true,
+      "icon": "settings"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "NativeScript:dataProvider",
+      "name": "elBuenSabor",
+      "title": "ElBuenSabor / ElBuenSabor",
+      "source": "everlive",
+      "everliveKey": "gmwy25bqw8qvep10",
+      "offlineStorage": false
+    }
+  ],
   "name": "nativeScriptApp",
   "navigation": "listmenu",
   "transition": "none",

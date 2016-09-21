@@ -1,0 +1,54 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" navigatedTo="navigatedTo">
+    <Page.actionBar>
+        <widgets:action-bar />
+    </Page.actionBar>
+
+    <GridLayout rows="auto, *">
+        <GridLayout rows="auto" columns="*, *">
+
+            <widgets:button text="Edit" tap="onEditItemTap" />
+
+
+        </GridLayout>
+        <StackLayout row="1">
+
+            <Label text="{{ activo }}" />
+
+            <Label text="{{ nombre }}" />
+
+
+            <TextView text="{{ apellido }}" editable="false" />
+
+
+            <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item">
+
+
+                <Label row="1" text="Calular" cssClass="label" />
+
+                <Label col="1" row="1" text="{{ celular }}" cssClass="label" textWrap="true" />
+
+                <!-- celularDetails content -->
+
+            </GridLayout>
+
+            <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+
+
+            <GridLayout columns="*, *" rows="auto, auto" cssClass="form-item">
+
+
+                <Label row="1" text="Sucursal" cssClass="label" />
+
+                <Label col="1" row="1" text="{{ sucursal }}" cssClass="label" textWrap="true" />
+
+                <!-- sucursalDetails content -->
+
+            </GridLayout>
+
+            <StackLayout cssClass="form-item-border" height="1"></StackLayout>
+            <!-- additional view content -->
+
+
+        </StackLayout>
+    </GridLayout>
+</Page>
